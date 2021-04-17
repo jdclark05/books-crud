@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Author Show</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/author_show.css') }}">
+</head>
+<body>
+    <div class="flex-all">
+        <div class="container">
+            <div class="heading">
+                <h3>{{favorites[0]['first_name']}} {{favorites[0]['last_name']}}'s Favorites</h3>
+                <div class="panel2">
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Book Title</th>
+                                <th class="text-center">Page Count</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            {% for favorite in favorites %}
+                            <tr>
+                                <td class="text-center"><a href="/book_show/{{favorite['book_id']}}"></a>{{favorite['title']}}</a></td>
+                                <td class="text-center">{{favorite['num_of_pages']}}</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <div class="homeLink">
+                        <p class="userLink"><a href="/">HOME</a></p> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row centered-form">
+            <div class="mini-container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Add Author's favorite </h4>
+                    </div>
+                    <div class="panel-body">
+                        <form action ="/author_fav_update/{{author_id}}" method="POST" role="form">
+                            <div class="row">
+                                <h2>Book: </h2>
+                                <select class="selections_menu" name="book_id">
+                                    <option value="">Select a Book</option>
+                                    {% for book in notLiked %}
+                                        <option value="{{ book['id'] }}">{{book['title'] }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="btn_fix">
+                                <input type="submit" value="Add To Favorites" action="author_fav_update" class="btn btn-primary btn-block"> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

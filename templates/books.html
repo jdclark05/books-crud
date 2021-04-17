@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Books</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/books.css') }}">
+</head>
+<body>
+    <div class="flex_all">
+        <div class="container">
+            <div class="row centered-form">
+            <div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>New Book</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form action ="/add_book" method="POST" role="form">
+                        <div class="row row-no-gutters">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-default" placeholder="Book Title" name="title">
+                            </div>
+                        </div>
+                        <div class="row row-no-gutters">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-default" placeholder="Number of Pages" name="num_of_pages">
+                            </div>
+                        </div>
+                        <input type="submit" value="Create" action="add_book" class="btn btn-info btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="footer">
+                <p class="userLink"><a href="/">HOME</a></p> 
+            </div>
+        </div>
+        <div class="container2">
+            <div class="heading">
+                <h3>All Books</h3>
+            </div>
+            <div class="panel2">
+                <table class="table-fill">
+                    <tbody class="table-hover">
+                    {% for book in books %}
+                    <tr>
+                        <td class="text-center"><a href="/book_show/{{book['id']}}">{{book['title']}}</a></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

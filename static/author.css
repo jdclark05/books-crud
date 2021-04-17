@@ -1,0 +1,284 @@
+body{
+    /* Safari 4-5, Chrome 1-9 */
+      background: -webkit-gradient(radial, center center, 0, center center, 460, from(#bec2c6), to(#2F2727));
+  
+    /* Safari 5.1+, Chrome 10+ */
+      background: -webkit-radial-gradient(circle, #bec2c6, #2F2727);
+  
+    /* Firefox 3.6+ */
+      background: -moz-radial-gradient(circle, #bec2c6, #2F2727);
+  
+    /* IE 10 */
+      background: -ms-radial-gradient(circle, #bec2c6, #2F2727);
+      height:600px;
+}
+
+.flex_all {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    margin-left: 200px;
+    flex: 1;
+}
+
+.container2 {
+    flex: 1;
+}
+
+.heading {
+    margin-left: 40px;
+}
+
+.heading > h3 {
+    color: whitesmoke;
+}
+
+.text-center >a {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.btn {
+    border: 2px solid rgb(1, 0, 37);
+    border-radius: 10px;
+    background-color: rgb(0, 132, 255);
+    color: #fff;
+    width: 225px;
+}
+
+.row {
+    width: 90%;
+    margin: 0 10px 10px 10px;
+}
+
+.row > select {
+    margin-top: 0px;
+    width: 100%;
+}
+
+.panel2 {
+    flex: 1;
+    width: 400px;
+    height: 500px;
+    overflow: scroll;
+    margin-top: 50px;
+    margin-left: -100px;
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.panel {
+    flex: 1;
+    width: 250px;
+    margin-top: 100px;
+    margin-left: -100px;
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.panel-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.panel-heading > h4 {
+    text-align: center;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.panel-heading > a {
+  flex: 1;
+  width: 100px;
+  margin-left: 20px;
+  font-size: .8rem;
+  align-items: center;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.centered-form{
+    margin-top: 60px;
+}
+  
+.centered-form .panel{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+  
+label.label-floatlabel {
+    font-weight: bold;
+    color: #46b8da;
+    font-size: 11px;
+}
+
+/*** Table Styles **/
+
+.table-hover {
+    height: 100px;
+    overflow: scroll;
+}
+
+.table-fill {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: 320px;
+    margin: auto;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+  
+a, a:visited {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+  
+th {
+    color:#D5DDE5;;
+    background:#1b1e24;
+    border-bottom:4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size:23px;
+    font-weight: 100;
+    padding:24px;
+    text-align:left;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align:middle;
+}
+  
+th:first-child {
+    border-top-left-radius:3px;
+}
+   
+th:last-child {
+    border-top-right-radius:3px;
+    border-right:none;
+}
+    
+tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color:#666B85;
+    font-size:16px;
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+ }
+   
+tr:hover td {
+    background:#7bb8ab;
+    color:#FFFFFF;
+    border-top: 1px solid #7bb8ab;
+}
+   
+tr:first-child {
+    border-top:none;
+}
+  
+tr:last-child {
+    border-bottom:none;
+}
+   
+tr:nth-child(odd) td {
+    background:#EBEBEB;
+}
+   
+tr:nth-child(odd):td {
+    background:#4E5066;
+}
+  
+tr:nth-child(odd):hover td {
+      background:#7bb8ab;
+}
+  
+tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+}
+   
+tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+}
+   
+td {
+    background:#FFFFFF;
+    padding:20px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+}
+  
+td.flex {
+    display: flex;
+    height: 100%;
+    border-right: 0px;
+}
+  
+th.text-left {
+    text-align: left;
+}
+  
+th.text-center {
+    text-align: center;
+}
+  
+th.text-right {
+    text-align: right;
+}
+  
+td.text-left {
+    text-align: left;
+}
+  
+td.text-center {
+    text-align: center;
+}
+  
+td.text-right {
+    text-align: right;
+}
+  
+.userLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border: 2px solid #222;
+    background-color: rgb(0, 132, 255);
+    border-radius: 10px;
+}
+   
+.row {
+    width: 90%;
+    margin: 0 10px 10px 10px;
+}
+  
+.row > select {
+    margin-top: 0px;
+    width: 100%;
+}
+    
+label.label-floatlabel {
+    font-weight: bold;
+    color: #46b8da;
+    font-size: 11px;
+}
+
+.footer {
+    margin-top: 25px;
+    display: flex;
+    margin-left: 25px;
+    align-items: center;
+}
+
+.footer-correction{
+    margin-left: 200px;
+}
